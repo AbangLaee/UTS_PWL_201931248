@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>UTS PWL Laisu Tabuni_201931248</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #1ec2ba;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #4d4848;
+    font-size: 50px;
+  }
+  .logo {
+    color: #444e57;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #1e85f4;
+  }
+  .carousel-indicators li {
+    border-color: #1e97f4;
+  }
+  .carousel-indicators li.active {
+    background-color: #1e74f4;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #1e7ef4; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #1e57f4;
+    background-color: #fff !important;
+    color: #000000;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #000000 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #020203;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #0f4258;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #323939 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1ecdf4;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myName">Laisu Tabuni</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">Profil</a></li>
+        <li><a href="#services">pendikan</a></li>
+        <li><a href="#portfolio">Hobi</a></li>
+        <li><a href="#pricing">Wisata</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Selamat Datang Di Website Saya</h1> 
+  <p>Terimakasi buat kalian yang sudah mengunjungi website SAYA</p> 
+  <form>
+  </form>
+</div>
+
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>BERIKUT INI ADALAH PROFIL SAYA</h2><br>
+      <h3>Hi perkenalkan</h3>
+      <p>Nama Saya_Laisu Tabuni dengan NIM_201931248 saya tinggal Di Bojong indah, Lebih tepatnya, Jln. Madrasah 1.
+        Rt:15/Rw :04. No: 5 B. 
+        Kosan : Mutiara. H. Jafar PLN. 
+        Lantai :3.Bojong Raya cengkareng. Jakarta- Barat.</p><br>
+      <p>saya Adalah Mahasiswa Aktif di salah satu kampus swasta di jakarta, Nama Kampusnya, INSTITUT TEKNOLOGI PERUSAHAAN LISTRIK NEGARA, Fakultas Telematika Energi, Jurusan Teknik Informatika, Angkatan Tahan 2019, bisa dibiang mahasiswa Semester AKHIR</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Visi dan MISI Saya</h2><br>
+      <h4><strong>VISI:</strong> Terciptanya kehidupan rantau dan ranah minangyangharmonis,akrab,pandai dan berkualitas serta berakhlakul kharimah dalam kehidupan bermasyarakat, berbangsa dan bernegara.</h4><br>
+      <p><strong>MISI:</strong> 
+        <P><STRong>1. </STRong> Menjalin Silaturahmi sesama perantau ranah minang.</P>
+        <P><STROng>2.</STROng> Meningkatkan kualitas diri masyarakat ranah dan rantau.</P>
+        <P><STRong>3.</STRong> Meningkatkan ketaqwaan dan keimanan dengan berpedoman kepada adat basandi syara・dan syara・basandi kitabullah. </P>
+        <P><STROng>4.</STROng> Mewujudkan rasa kebersamaan Badunsanak dengan saling membantu,mengisi,dan berbagi sesama perantau ranah minang.</p></P>
+    </div>
+  </div>
+</div>
+
+
+<div id="services" class="container-fluid text-center">
+  <h2>Riwayat Pendidikan\</h2>
+  <h4>Pendidikan Formal dan Non Formal</h4>
+  <div class="container mt-3">          
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th>No </th>
+          <th>TAHUN </th>
+          <th>INSTANSI/SEKOLAH</th>
+          <th>PERANAN </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. </td>
+          <td>2007 - 2013</td>
+          <td>SD INPRES MBUA </td>
+          <td> Siswa SD </td>
+        </tr>
+        <tr>
+          <td>2. </td>
+          <td>2013-2016</td>
+          <td>SMP YPK WAMENA </td>
+          <td> Siswa SMP </td>
+        </tr>
+        <tr>
+          <td>3, </td>
+          <td>2016-2019</td>
+          <td>SMA N 1 WAMENA </td>
+          <td> Siswa SMA </td>
+        </tr>
+        <tr>
+            <td>4. </td>
+            <td>IT PLN Jakarta 2020</td>
+            <td>MOS (word 2016) </td>
+            <td> Peserta  </td>
+          </tr>
+          <tr>
+            <td>5. </td>
+            <td>IT PLN Jakarta 2020</td>
+            <td>LKMM Pra-TD  </td>
+            <td>Peserta</td>
+          </tr>
+          <tr>
+            <td>6. </td>
+            <td>IT PLN Jakarta 2020</td>
+            <td>Forum Tunas Muda (FORTUDA #5)  </td>
+            <td>Peserta  </td>
+          </tr>
+          <tr>
+            <td>7. </td>
+            <td>IT PLN Jakarta 2020</td>
+            <td>LDKM BIG DATA 2020 </td>
+            <td> Peserta </td>
+          </tr>
+      </Tbody>
+    </table>
+  </div>
+</div>
+
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Hobi saya </h2><br>
+  <h4>Dan gambar berikut ini adalah Hobi saya </h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="futsal.jpeg" alt="futsal" width="400" height="300">
+        <p><strong>Fusal</strong></p>
+        <p>saya sangat suka sama futsal dan saya adalah salah satu pemain timnas kampus</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="makan.jpeg" alt="makan" width="400" height="300">
+        <p><strong>Kuliner </strong></p>
+        <p>saya juga salah satu orang yang suka dengan kuliner</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="travel.jpeg" alt="travel" width="400" height="300">
+        <p><strong>Traveling</strong></p>
+        <p>Ya saya Sangat suka dengan jalan, dan traveling kemapun saya ingin pergi</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>penjelasan terkai dengan ketiga Hobi saya yang diatas ini</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>kenapa dan mengapa Hobi saya yang pertama adalah Futsal<br><span>Karena Futsal lebih mengarah kepada olahraga dikarenakan olah adalah bagian terpenting dari kesehatan, fisik, dan tubuh kita yang bagus dan baik untuk di pandang </span></h4>
+      </div>
+      <div class="item">
+        <h4>dan yang kedua adalah <br><span>saya orangnya suka dengan kuliner dan suka sekali makan, karena jika ada makanan depan saya pasti saya makan dan kasi habis </span></h4>
+      </div>
+      <div class="item">
+        <h4>dan habi ketiga adalah traveling<br><span>karena saya orang tidak suka terlalu lama tinggal dalam kosan atau rumah maka dari itu saya sering berpergian dimanapun saya mau dan bersenang-senang </span></h4>
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>WISATA di daerah Saya </h2>
+    <h4>Berikut gambar ini adalah Beberapa wisata yang Terletak didaerah saya yaitu PAPUA</h4>
+  </div>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="rajaampat.jpg" alt="Raja amapt" width="400" height="300">
+        <p><strong>RAJA AMPAT</strong></p>
+        <p>Raja Ampat adalah sebuah kabupaten dan merupakan bagian dari Propinsi Papua Barat. Untuk mencapai Kepulauan ini, kita harus menginjakkan kaki di kota Sorong terlebih dahulu. Biasanya para wisatawan banyak menggunakan penerbangan untuk sampai ke kota ini. </p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="jembatanmerah.jpg" alt="jembatanmerahk" width="400" height="300">
+        <p><strong>JEMBATAN MERAH </strong></p>
+        <p> adalah salah satu jembatan di Provinsi Papua yang menghubungkan Holtekamp dengan Hamadi.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="pulaumansinam.jpg" alt="pulaumansinam" width="400" height="300">
+        <p><strong>PULAU MANSINAM</strong></p>
+        <p>Mansinam adalah pulau pariwisata religi umat Kristen Protestan. Pulau ini merupakan bagian dari wilayah Papua Barat. Letaknya sekitar 6 Kilometer dari Kota Manokwari. Untuk mencapai pulau ini hanya membutuhkan waktu 10 sampai 15 menit menggunakan kapal mesin.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="danaulove.jpg" alt="danau love" width="400" height="300">
+          <p><strong>DANAU LOVE</strong></p>
+          <p>Danau ini memiliki bentuk yang unik, sangat mirip dengan hati atau simbol cinta. Tak aneh jika warga setempat menyebut danau tersebut dengan nama danau Love.
+            Untuk tiba ke danau yang memiliki nama Imfote itu bisa menggunakan kendaraan roda empat dengan jarak tempuh sekitar satu hingga dua jam dari pusat Kota Jayapura.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="danausentani.jpg" alt="danau sentani" width="400" height="300">
+          <p><strong>DANAU SENTANI</strong></p>
+          <p>Danau Sentani adalah danau yang terletak di Papua Indonesia. Danau Sentani berada di bawah lereng Pegunungan Cagar Alam Cyclops yang memiliki luas sekitar 245.000 hektar. Danau ini terbentang antara Kota Jayapura dan Kabupaten Jayapura, Papua. Danau Sentani yang memiliki luas sekitar 9.360 hektar dan berada pada ketinggian 75 mdpl. Danau Sentani merupakan danau terluas di Papua.</p>
+        </div>
+      </div>
+  </div>
+
+    <div class="carousel-inner" role="listbox">
+      
+      <div class="item">
+        <h4>dan yang kedua adalah <br><span>saya orangnya suka dengan kuliner dan suka sekali makan, karena jika ada makanan depan saya pasti saya makan dan kasi habis </span></h4>
+      </div>
+      <div class="item">
+        <h4>dan habi ketiga adalah traveling<br><span>karena saya orang tidak suka terlalu lama tinggal dalam kosan atau rumah maka dari itu saya sering berpergian dimanapun saya mau dan bersenang-senang </span></h4>
+      </div>
+    </div>
+</div>
+
+<div id="kontak" class="container-fluid bg-grey">
+  <h2 class="text-center">Kontak saya</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>berikut ini kontak da alamat tinggal saya</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Saya tinggal di Bojong jakarta barat</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 081248062874</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> laisutabuni@gmail.com</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+<img src="laisu.jpeg" class="laisu-image laisu-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>website ini resmi milik LaisuTabuni_201931248<a href="laisu" title="Visit laisus">_UTS PWL Laisu Tabuni</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
